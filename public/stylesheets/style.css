@@ -1,5 +1,5 @@
 body {
-  font: 16px "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+  font: 19px "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -20,8 +20,8 @@ a {
 }
 
 .tagline {
-  font: 37px "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
-  padding-top: 250px;
+  font: 45px "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+  padding-top: 200px;
   width: 100px;
 margin-left: 350px;
 
@@ -29,7 +29,7 @@ margin-left: 350px;
 
 .woke
 {
-  font: 45px "HelveticaNeue-Bold", Helvetica, Arial, sans-serif;
+  font: 51px "HelveticaNeue-Bold", Helvetica, Arial, sans-serif;
 }
 
 #start{
