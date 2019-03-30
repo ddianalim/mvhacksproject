@@ -14,17 +14,16 @@
           <img src="/images/icon.png" width="25" height="25" class="d-inline-block align-center" alt="">
           {{title}}
         </a>
+
+        <div class="navbar-text navbar-nav ml-auto">
+          {{# if currentUserId}}
+            <a class="nav-button username" href="/days">{{username}}</a>
+            <a class="nav-button" href="/logout">Log Out</a>
+          {{else}}
+            <a class="nav-button" href="/login">Log In</a>
+          {{/if}}
+        </div>
       </nav>
-
-      <div class="navbar-text navbar-nav ml-auto">
-        {{# if currentUserId}}
-          <a class="nav-button username" href="/days">{{username}}</a>
-          <a class="nav-button" href="/logout">Log Out</a>
-        {{else}}
-          <a class="nav-button" href="/login">Log In</a>
-        {{/if}}
-      </div>
-
     </header>
     <main>
       <br></br>
