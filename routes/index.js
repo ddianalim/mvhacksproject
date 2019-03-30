@@ -61,8 +61,13 @@ router.get('/tweets', function(req, res, next) {
     access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
   });
 
+  var candidates = ["JohnDelaney", "AndrewYang", "ewarren", "JulianCastro", "TulsiGabbard", "SenGillibrand", "KamalaHarris", "PeteButtigieg", "CoryBooker", "amyklobuchar", "BernieSanders", "GovInslee", "Hickenlooper", "BetoORourke", "realDonaldTrump", "WayneMessam", "marwilliamson"];
+  var r = Math.floor((Math.random() * 20) - 1);
+  var name = candidates[r];
+  console.log(name);
+
   var params = {
-    screen_name: 'realDonaldTrump',
+    screen_name: name,
     count: 100,
     tweet_mode: 'extended'
   };
