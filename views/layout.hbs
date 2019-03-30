@@ -11,10 +11,20 @@
     <header>
       <nav class="navbar navbar-light fixed-top bg-light">
         <a class="navbar-brand" href="/">
-          <img src="/images/icon.png" width="30" height="30" class="d-inline-block align-center" alt="">
+          <img src="/images/icon.png" width="25" height="25" class="d-inline-block align-center" alt="">
           {{title}}
         </a>
       </nav>
+
+      <div class="navbar-text navbar-nav ml-auto">
+        {{# if currentUserId}}
+          <a class="nav-button username" href="/days">{{username}}</a>
+          <a class="nav-button" href="/logout">Log Out</a>
+        {{else}}
+          <a class="nav-button" href="/login">Log In</a>
+        {{/if}}
+      </div>
+
     </header>
     <main>
       {{{body}}}
