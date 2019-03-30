@@ -15,14 +15,14 @@
           {{title}}
         </a>
 
-        <div class="navbar-text navbar-nav ml-auto">
-          {{# if currentUserId}}
-            <a class="nav-button username" href="/days">{{username}}</a>
-            <a class="nav-button" href="/logout">Log Out</a>
-          {{else}}
-            <a class="nav-button" href="/login">Log In</a>
-          {{/if}}
-        </div>
+      <div class="navbar-text navbar-nav ml-auto">
+        {{# if currentUserId}}
+          <a class="nav-button username" href="/quiz">{{username}}</a>
+          <a class="nav-button" href="/logout">Log Out</a>
+        {{else}}
+          <a class="nav-button" href="/login">Log In</a>
+        {{/if}}
+      </div>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
