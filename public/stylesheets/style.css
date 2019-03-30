@@ -1,4 +1,5 @@
 body {
+  padding: 50px;
   font: 19px "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
 }
 
@@ -23,7 +24,7 @@ a {
   font: 45px "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
   padding-top: 200px;
   width: 100px;
-margin-left: 350px;
+  margin-left: 350px;
 
 }
 
@@ -36,4 +37,9 @@ margin-left: 350px;
   position: fixed;
   top: 350px;
   right: 350px;
+}
+
+#images{
+  height=50px;
+  width=50px;
 }

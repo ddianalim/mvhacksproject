@@ -1,8 +1,16 @@
 <div class="parallax text-align">
-  <h1 class="tagline" style="text-align:left"> Make America
+  <h1 class="tagline" style="text-align:left"> Make
+    <div>America</div>
   <div class=woke>{{title}}</div>
   Again</h1>
 
-  <a href="../users/new" > <button class="btn btn-primary" id="start">Get Started</button> </a>
-
+  {{# if currentUserId}}
+  <a href="/quiz">
+    <button type="button" class="btn btn-outline-light btn-lg" id="start">Go To Profile</button>
+  </a>
+  {{else}}
+  <a href="/users/new">
+    <button type="button" class="btn btn-outline-light btn-lg" id="start">Get Started</button>
+  </a>
+  {{/if}}
 </div>
