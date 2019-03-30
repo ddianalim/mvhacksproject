@@ -49,4 +49,31 @@ router.get('/logout', (req, res, next) => {
   return res.redirect('/');
 });
 
+/* GET tweets. */
+router.get('/tweets', function(req, res, next) {
+
+  var Twitter = require('twitter');
+
+  var client = new Twitter({
+    consumer_key: process.env.TWITTER_CONSUMER_KEY,
+    consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+    access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+    access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
+  });
+
+  var params = {
+    screen_name: 'realDonaldTrump',
+    count: 2,
+    tweet_mode: 'extended'
+  };
+
+  client.get('statuses/user_timeline', params, function(error, tweets, response) {
+      res.render('tweet', { title: 'Woke', tweet: tweets[0]["full_text"] });
+  });
+
+});
+
+module.exports = router;
+
+
 module.exports = router;
