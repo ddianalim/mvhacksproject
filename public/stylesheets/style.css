@@ -1,39 +1,12 @@
 body {
   padding: 50px;
-  font: 30px "Helvetica", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}
-
-.parallax {
-  background-color: #F4B4BB; /* For browsers that do not support gradients */
-  background-image: linear-gradient(#ff0000, #9745c6, #3d85c6); /* Standard syntax (must be last) */
-  min-height: 800px;
-  width: 100vw;
-  margin-top: -2em;
-  margin-bottom: 2em;
-  margin-left: calc(-50vw + 50% - 8px);
-  position: relative;
-  color: white;
-}
-
-.tagline {
-  padding: 300px;
-}
-.woke{
-  color:#a7a7a7;
-}
-
-mongoURI = mongodb://user1:password1@ds349175.mlab.com:49175/woke
-
-body {
   font: 19px "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+  font: 30px "Helvetica", Helvetica, Arial, sans-serif;
+
 }
 
 .parallax {
@@ -53,7 +26,7 @@ a {
   font: 45px "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
   padding-top: 200px;
   width: 100px;
-margin-left: 350px;
+  margin-left: 350px;
 
 }
 
