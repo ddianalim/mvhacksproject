@@ -63,12 +63,14 @@ router.get('/tweets', function(req, res, next) {
 
   var params = {
     screen_name: 'realDonaldTrump',
-    count: 2,
+    count: 100,
     tweet_mode: 'extended'
   };
 
   client.get('statuses/user_timeline', params, function(error, tweets, response) {
-      res.render('tweet', { title: 'Woke', tweet: tweets[0]["full_text"] });
+    var random = Math.floor((Math.random() * 100) - 1);
+    var t = tweets[random]["full_text"];
+    res.render('tweet', { title: 'Woke', tweet: t });
   });
 
 });
