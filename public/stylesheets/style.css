@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 30px "Helvetica", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -9,7 +9,7 @@ a {
 
 .parallax {
   background-color: #F4B4BB; /* For browsers that do not support gradients */
-  background-image: linear-gradient(red, #ffffff, blue); /* Standard syntax (must be last) */
+  background-image: linear-gradient(#ff0000, #9745c6, #3d85c6); /* Standard syntax (must be last) */
   min-height: 800px;
   width: 100vw;
   margin-top: -2em;
@@ -17,4 +17,8 @@ a {
   margin-left: calc(-50vw + 50% - 8px);
   position: relative;
   color: white;
+}
+
+.tagline {
+  padding: 300px;
 }
