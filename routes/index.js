@@ -69,7 +69,9 @@ router.get('/tweets', function(req, res, next) {
   var params = {
     screen_name: name,
     count: 100,
-    tweet_mode: 'extended'
+    tweet_mode: 'extended',
+    in_reply_to_status_id: null,
+    retweeted: false
   };
 
   client.get('statuses/user_timeline', params, function(error, tweets, response) {
