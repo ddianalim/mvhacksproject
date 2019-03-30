@@ -7,6 +7,7 @@ a {
   color: #00B7FF;
 }
 
+
 .parallax {
   background-color: #F4B4BB; /* For browsers that do not support gradients */
   background-image: linear-gradient(#ff0000, #9745c6, #3d85c6); /* Standard syntax (must be last) */
@@ -35,11 +36,58 @@ a {
 
 #start{
   position: fixed;
-  top: 350px;
+  top: 330px;
   right: 350px;
 }
 
-#images{
-  height=50px;
-  width=50px;
+.container {
+  position: relative;
+  width: 250px;
+}
+.images {
+  align-content: center;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 250px;
+  width: 250px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 90%
+}
+
+
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.images img {
+  height: 250px!important;
+  width: 250px!important;
+  padding: 20px;
+  border-radius: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
