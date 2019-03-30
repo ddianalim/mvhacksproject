@@ -54,9 +54,8 @@ router.get('/new', auth.requireLogin, (req, res, next) =>{
     "SenGillibrand", "KamalaHarris", "PeteButtigieg", "CoryBooker", "amyklobuchar",
     "BernieSanders", "GovInslee", "Hickenlooper", "BetoORourke", "realDonaldTrump",
     "WayneMessam", "marwilliamson", "Joebiden", "RepSwalwell", "GovBillWeld", "OfficialMcAfee" ];
-  var r = Math.floor((Math.random() * 21) + 1);
+  var r = Math.floor((Math.random() * 20) + 1);
   var name = candidates[r];
-  console.log(name);
 
   var params = {
     screen_name: name,
