@@ -10,7 +10,7 @@ router.get('/', auth.requireLogin, (req, res, next) => {
   //   if(err) {
   //     console.error(err);
   //   } else {
-  //     res.render('days/index', { days: days });
+  //     res.render('quiz/index', { quiz: quiz });
   //   }
   // });
        res.render('quiz/index', { quiz: quiz });
@@ -22,7 +22,7 @@ router.get('/', auth.requireLogin, (req, res, next) => {
 //   day.users.push(req.session.userId);
 //
 //   Day.create(day).then(() => {
-//     return res.redirect('/days');
+//     return res.redirect('/quiz');
 //   }).catch((err) => {
 //     console.log(err.message);
 //   });
@@ -30,11 +30,11 @@ router.get('/', auth.requireLogin, (req, res, next) => {
 //   // Day.save(function(err, day) {
 //   //   console.log(day);
 //   //   if (err) { console.error(err);}
-//   //   return res.redirect('/days')
+//   //   return res.redirect('/quiz')
 //   // });
 // });
 //
-// Days new
+// quiz new
 router.get('/new', auth.requireLogin, (req, res, next) =>{
   User.findById(req.params.userId, function(err, quiz) {
     if(err) { console.error(err);}
@@ -43,22 +43,22 @@ router.get('/new', auth.requireLogin, (req, res, next) =>{
   });
 });
 //
-// // /* GET days by ID. */
+// // /* GET quiz by ID. */
 // // router.get('/:id', auth.requireLogin, (req, res, next) => {
 // //   Day.findById(req.params.id, (err, day) => {
 // //     if (err) {
 // //       console.log(err);
 // //     }
-// //     res.render('days/show', { day: day  });
+// //     res.render('quiz/show', { day: day  });
 // //   });
 // // });
 //
-// // Days show
+// // quiz show
 // router.get('/:id', auth.requireLogin, (req, res, next) => {
 //   Day.findById(req.params.id, function(err, day) {
 //     if(err) { console.error(err) };
 //
-//     res.render('days/show', { day: day });
+//     res.render('quiz/show', { day: day });
 //   });
 // });
 
