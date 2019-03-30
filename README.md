@@ -40,3 +40,4 @@ Results
 - Twillio sends out news articles
 - Twilio sends out voter registration deadline reminders
 - page w reminders for what to bring on voting day
+- theme color rbg value changes based off of Green/Demo/Rep party % voters
