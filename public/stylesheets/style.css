@@ -1,6 +1,6 @@
 body {
   padding: 50px;
-  font: 30px "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+  font: 37px "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -23,4 +23,15 @@ a {
   padding: 300px;
   width: 100px;
   margin-left: 70px;
+
+}
+
+.woke
+{
+  font: 45px "HelveticaNeue-Bold", Helvetica, Arial, sans-serif;
+}
+
+#start{
+  margin-left: 900px;
+  margin-bottom: 450px;
 }
