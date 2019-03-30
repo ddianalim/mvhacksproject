@@ -6,3 +6,15 @@ body {
 a {
   color: #00B7FF;
 }
+
+.parallax {
+  background-color: #F4B4BB; /* For browsers that do not support gradients */
+  background-image: linear-gradient(red, #ffffff, blue); /* Standard syntax (must be last) */
+  min-height: 800px;
+  width: 100vw;
+  margin-top: -2em;
+  margin-bottom: 2em;
+  margin-left: calc(-50vw + 50% - 8px);
+  position: relative;
+  color: white;
+}
