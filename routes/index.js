@@ -69,7 +69,7 @@ router.get('/tweets', function(req, res, next) {
 
   client.get('statuses/user_timeline', params, function(error, tweets, response) {
     var random = Math.floor((Math.random() * 100) - 1);
-    var t = tweets[0]["full_text"];
+    var t = tweets[random]["full_text"];
     for(i = 0; i < t.length; i++) {
       if(t.substring(i,i+5)==("&amp;")) {
         t= t.substring(0,i) + "&" + t.substring(i+5);
