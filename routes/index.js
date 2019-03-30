@@ -65,7 +65,7 @@ router.get('/tweets', function(req, res, next) {
     "JohnDelaney", "AndrewYang", "ewarren", "JulianCastro", "TulsiGabbard",
     "SenGillibrand", "KamalaHarris", "PeteButtigieg", "CoryBooker", "amyklobuchar",
     "BernieSanders", "GovInslee", "Hickenlooper", "BetoORourke", "realDonaldTrump",
-    "WayneMessam", "marwilliamson"];
+    "WayneMessam", "marwilliamson", "Joebiden", "RepSwalwell", "GovBillWeld", "OfficialMcAfee" ];
   var r = Math.floor((Math.random() * 17) + 1);
   var name = candidates[r];
   console.log(name);
