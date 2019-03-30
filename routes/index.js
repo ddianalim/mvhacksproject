@@ -61,27 +61,34 @@ router.get('/tweets', function(req, res, next) {
     access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
   });
 
+  var candidates = [
+    "JohnDelaney", "AndrewYang", "ewarren", "JulianCastro", "TulsiGabbard",
+    "SenGillibrand", "KamalaHarris", "PeteButtigieg", "CoryBooker", "amyklobuchar",
+    "BernieSanders", "GovInslee", "Hickenlooper", "BetoORourke", "realDonaldTrump",
+    "WayneMessam", "marwilliamson"];
+  var r = Math.floor((Math.random() * 17) + 1);
+  var name = candidates[r];
+  console.log(name);
+
   var params = {
-    screen_name: 'realDonaldTrump',
+    screen_name: name,
     count: 100,
-    tweet_mode: 'extended'
+    tweet_mode: 'extended',
+    // in_reply_to_status_id: null,
+    // retweeted: false
   };
 
   client.get('statuses/user_timeline', params, function(error, tweets, response) {
-    var random = Math.floor((Math.random() * 100) - 1);
-    var t = tweets[random]["full_text"];
-    for(i = 0; i < t.length; i++) {
-      if(t.substring(i,i+5)==("&amp;")) {
-        t= t.substring(0,i) + "&" + t.substring(i+5);
+    var random = Math.floor((Math.random() * 100));
+    var text = tweets[random]["full_text"];
+    for(i = 0; i < text.length; i++) {
+      if(text.substring(i,i+5)==("&amp;")) {
+        text= text.substring(0,i) + "&" + text.substring(i+5);
       }
     }
-
-    res.render('tweet', { title: 'Woke', tweet: t});
+    res.render('tweet', { title: 'Woke', text: text});
   });
 
 });
-
-module.exports = router;
-
 
 module.exports = router;
