@@ -1,5 +1,6 @@
 body {
-  font: 19px "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+  padding: 50px;
+  font: 30px "Helvetica", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -9,8 +10,7 @@ a {
 .parallax {
   background-color: #F4B4BB; /* For browsers that do not support gradients */
   background-image: linear-gradient(#ff0000, #9745c6, #3d85c6); /* Standard syntax (must be last) */
-  min-height: 700px;
-  max-height: 1100px;
+  min-height: 800px;
   width: 100vw;
   margin-top: -2em;
   margin-bottom: 2em;
@@ -20,20 +20,8 @@ a {
 }
 
 .tagline {
-  font: 45px "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
-  padding-top: 200px;
-  width: 100px;
-margin-left: 350px;
-
+  padding: 300px;
 }
-
-.woke
-{
-  font: 51px "HelveticaNeue-Bold", Helvetica, Arial, sans-serif;
-}
-
-#start{
-  position: fixed;
-  top: 350px;
-  right: 350px;
+.woke{
+  color:#a7a7a7;
 }
