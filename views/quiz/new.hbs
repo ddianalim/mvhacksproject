@@ -2,21 +2,10 @@
   <form action="/posts" method="post" enctype="multipart/form-data">
     <h1>What's Your Stance?</h1>
 
-    <div class="slidecontainer">
-      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-      <p>Value: <span id="demo"></span></p>
+    <div class="form-group">
+      <label for="post-description">Description</label>
+      <textarea name="description" class="input-text" id="post-description" rows="3" placeholder="Describe your project..." required></textarea>
     </div>
-
-
-    <script>
-    var slider = document.getElementById("myRange");
-    var output = document.getElementById("demo");
-    output.innerHTML = slider.value;
-
-    slider.oninput = function() {
-      output.innerHTML = this.value;
-    }
-    </script>
 
     <div class="text-right">
       <button type="submit" class="btn btn-primary">Submit</button>
