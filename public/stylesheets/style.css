@@ -10,7 +10,8 @@ a {
 .parallax {
   background-color: #F4B4BB; /* For browsers that do not support gradients */
   background-image: linear-gradient(#ff0000, #9745c6, #3d85c6); /* Standard syntax (must be last) */
-  min-height: 800px;
+  min-height: 200px;
+  max-height: 1100px;
   width: 100vw;
   margin-top: -2em;
   margin-bottom: 2em;
@@ -20,9 +21,9 @@ a {
 }
 
 .tagline {
-  padding: 300px;
+  padding-top: 450px;
   width: 100px;
-  margin-left: 70px;
+margin-left: 300px;
 
 }
 
@@ -33,5 +34,5 @@ a {
 
 #start{
   margin-left: 900px;
-  margin-bottom: 450px;
+  margin-bottom: 550px;
 }
