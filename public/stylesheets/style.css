@@ -47,6 +47,7 @@ a {
 .images {
   align-content: center;
   width: 100%;
+  display: flex;
 }
 
 .overlay {
