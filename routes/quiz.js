@@ -27,11 +27,11 @@ router.get('/', (req, res, next) =>{
     "SenGillibrand", "KamalaHarris", "PeteButtigieg", "CoryBooker", "amyklobuchar",
     "BernieSanders", "GovInslee", "Hickenlooper", "BetoORourke", "realDonaldTrump",
     "WayneMessam", "marwilliamson", "Joebiden", "RepSwalwell", "GovBillWeld", "OfficialMcAfee" ];
-  var r = Math.floor((Math.random() * 20) + 1);
-  var name = candidates[r];
+  var r = Math.floor((Math.random() * 19) + 1);
+  var n = candidates[r];
 
   var params = {
-    screen_name: name,
+    screen_name: n,
     count: 100,
     tweet_mode: 'extended',
     // in_reply_to_status_id: null,
@@ -81,5 +81,10 @@ router.post('/yesno', auth.requireLogin, (req, res, next) => {
   });
 });
 
+router.get('/show', (req, res, next) => {
+
+    res.render('quiz/show');
+
+});
 
 module.exports = router;

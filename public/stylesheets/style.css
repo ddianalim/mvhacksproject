@@ -50,6 +50,11 @@ a {
   display: flex;
 }
 
+.images {
+  align-content: center;
+  width: 100%;
+}
+
 .overlay {
   position:absolute;
   top: 20;
