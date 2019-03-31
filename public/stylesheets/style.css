@@ -40,21 +40,18 @@ a {
   right: 350px;
 }
 
-.container {
+.c {
   position: relative;
   width: 250px;
 }
+
 .images {
-  align-content: center;
+  /* align-content: center; */
   width: 100%;
 }
 
 .overlay {
   position:absolute;
-  top: 20;
-  bottom: 0;
-  left: 20;
-  right: 0;
   height: 215px;
   width: 215px;
   opacity: 0;
@@ -66,9 +63,7 @@ a {
   z-index:1;
 }
 
-
-
-.container:hover .overlay {
+.c:hover .overlay {
   opacity: 1;
 }
 
@@ -76,7 +71,7 @@ a {
   height: 250px!important;
   width: 250px!important;
   padding: 20px;
-  /* border-radius: 100%; */
+  border-radius: 100%;
   overflow: hidden;
   position: relative;
 }
