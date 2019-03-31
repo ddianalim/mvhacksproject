@@ -68,6 +68,8 @@ router.post('/', auth.requireLogin, (req, res, next) => {
 router.post('/yesno', auth.requireLogin, (req, res, next) => {
   User.findById(req.params.id, function(err, user) {
     let name = req.query.name;
+    console.log('name = ' + parseInt(user[name]));
+    console.log('points = ' + parseInt(req.body.points));
     user[name] = parseInt(user[name]) + parseInt(req.body.points);
 
     user.save(function(err, user) {
