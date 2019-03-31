@@ -1,1 +1,17 @@
-<h1>Results</h1>
+<div class="container">
+  <h1>What's Your Stance?</h1>
+
+  <p id="tweet">{{text}}</p>
+    <form action="/quiz?name={{name}}" method="post">
+      <input type="hidden" name="points" value="-1">
+      <button type="submit" class="btn btn-danger">Disagree</button>
+    </form>
+    <form action="/quiz?name={{name}}" method="post">
+      <input type="hidden" name="points" value="1">
+      <button type="submit" class="btn btn-success">Agree</button>
+    </form>
+    <button class="btn btn-light">Skip</button>
+  <div>
+    <p><a class="link" href="/quiz">Cancel</a></p>
+  </div>
+</div>
