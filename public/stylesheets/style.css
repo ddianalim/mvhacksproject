@@ -102,14 +102,16 @@ a {
   font: 18px "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
   color: white;
   position: absolute;
-  left: 275px;
+  left: 265px;
   top: 125px;
+  list-style-type: none
 }
 
 .list2 {
   font: 18px "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
   color: white;
   position: absolute;
-  left: 765px;
+  left: 750px;
   top: 125px;
+  list-style-type: none
 }
