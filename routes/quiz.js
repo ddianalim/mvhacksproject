@@ -5,37 +5,8 @@ const auth = require('./helpers/auth');
 const Quiz = require('../models/quiz');
 const User = require('../models/user');
 
-router.get('/', auth.requireLogin, (req, res, next) => {
-  // Quiz.find({users: res.locals.currentUserId}).sort({ date: +1 }).exec(function(err, quiz) {
-  //   if(err) {
-  //     console.error(err);
-  //   } else {
-  //     res.render('quiz/index', { quiz: quiz });
-  //   }
-  // });
-       res.render('quiz/index', { quiz: quiz });
-});
-
-// /* POST day. */
-// router.post('/', auth.requireLogin, (req, res, next) => {
-//   let day = new Day(req.body);
-//   day.users.push(req.session.userId);
-//
-//   Day.create(day).then(() => {
-//     return res.redirect('/quiz');
-//   }).catch((err) => {
-//     console.log(err.message);
-//   });
-//
-//   // Day.save(function(err, day) {
-//   //   console.log(day);
-//   //   if (err) { console.error(err);}
-//   //   return res.redirect('/quiz')
-//   // });
-// });
-//
 // quiz new
-router.get('/new', auth.requireLogin, (req, res, next) =>{
+router.get('/', auth.requireLogin, (req, res, next) =>{
   User.findById(req.params.userId, function(err, quiz) {
     if(err) { console.error(err);}
   });
@@ -67,35 +38,45 @@ router.get('/new', auth.requireLogin, (req, res, next) =>{
 
   client.get('statuses/user_timeline', params, function(error, tweets, response) {
     var random = Math.floor((Math.random() * 100));
-    var text = tweets[random]["full_text"];
+    var text = tweets[random]['full_text'];
+    var name = tweets[random].user['screen_name'];
+    console.log('name: ' +name);
+
     for(i = 0; i < text.length; i++) {
       if(text.substring(i,i+5)==("&amp;")) {
         text= text.substring(0,i) + "&" + text.substring(i+5);
       }
     }
-    res.render('quiz/new', { title: 'Woke', text: text});
+    res.render('quiz/index', { title: 'Woke', text: text, name: name});
   });
 
 });
 
-//
-// // /* GET quiz by ID. */
-// // router.get('/:id', auth.requireLogin, (req, res, next) => {
-// //   Day.findById(req.params.id, (err, day) => {
-// //     if (err) {
-// //       console.log(err);
-// //     }
-// //     res.render('quiz/show', { day: day  });
-// //   });
-// // });
-//
-// // quiz show
-// router.get('/:id', auth.requireLogin, (req, res, next) => {
-//   Day.findById(req.params.id, function(err, day) {
-//     if(err) { console.error(err) };
-//
-//     res.render('quiz/show', { day: day });
-//   });
-// });
+router.post('/', auth.requireLogin, (req, res, next) => {
+  console.log(req.query);
+  User.findById(req.session.userId).exec(function(err, user) {
+    user[req.query.name] += parseInt(req.body.points);
+
+    user.save(function(err, user) {
+      if(err) { console.error(err) };
+
+      return res.redirect('quiz');
+    });
+  });
+});
+
+router.post('/yesno', auth.requireLogin, (req, res, next) => {
+  User.findById(req.params.id, function(err, user) {
+    let name = req.query.name;
+    user[name] = parseInt(user[name]) + parseInt(req.body.points);
+
+    user.save(function(err, user) {
+      if(err) { console.error(err) };
+
+      return res.redirect('quiz/index');
+    });
+  });
+});
+
 
 module.exports = router;
