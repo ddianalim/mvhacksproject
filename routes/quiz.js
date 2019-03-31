@@ -6,7 +6,9 @@ const Quiz = require('../models/quiz');
 const User = require('../models/user');
 
 // quiz new
-router.get('/', auth.requireLogin, (req, res, next) =>{
+// router.get('/', auth.requireLogin, (req, res, next) =>{
+router.get('/', (req, res, next) =>{
+
   User.findById(req.params.userId, function(err, quiz) {
     if(err) { console.error(err);}
   });
@@ -52,7 +54,8 @@ router.get('/', auth.requireLogin, (req, res, next) =>{
 
 });
 
-router.post('/', auth.requireLogin, (req, res, next) => {
+// router.post('/', auth.requireLogin, (req, res, next) => {
+router.post('/', (req, res, next) => {
   console.log(req.query);
   User.findById(req.session.userId).exec(function(err, user) {
     user[req.query.name] += parseInt(req.body.points);
