@@ -1,17 +1,25 @@
-<div class="container">
+<div class="container quiz-1">
   <h1>What's Your Stance?</h1>
-
   <p id="tweet">{{text}}</p>
+
+<div class="buttonsss">
     <form action="/quiz?name={{name}}" method="post">
       <input type="hidden" name="points" value="-1">
-      <button type="submit" class="btn btn-danger">Disagree</button>
+      <button type="submit" class="btn btn-danger hi">Disagree</button>
     </form>
     <form action="/quiz?name={{name}}" method="post">
       <input type="hidden" name="points" value="1">
-      <button type="submit" class="btn btn-success">Agree</button>
+      <button type="submit" class="btn btn-success hi">Agree</button>
     </form>
-    <button class="btn btn-light">Skip</button>
+    <a href="/quiz">
+    <button class="btn btn-light hi">Skip</button>
+  </a>
+</div>
   <div>
-    <p><a class="link" href="/quiz">Cancel</a></p>
+
+    <div class="buttonsss">
+    <p><a class="link hi" href="/quiz">Cancel</a></p>
+    <p><a class="link hi" href="/candidates/show">See results</a></p>
+</div>
   </div>
 </div>
