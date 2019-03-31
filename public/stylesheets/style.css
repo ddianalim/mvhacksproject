@@ -50,19 +50,20 @@ a {
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
+  position:absolute;
+  top: 20;
   bottom: 0;
-  left: 0;
+  left: 20;
   right: 0;
-  height: 250px;
-  width: 250px;
+  height: 215px;
+  width: 215px;
   opacity: 0;
   transition: .5s ease;
   background-color: #008CBA;
   padding: 20px;
   overflow: hidden;
-  border-radius: 90%
+  border-radius: 100%;
+  z-index:1;
 }
 
 
@@ -75,7 +76,7 @@ a {
   height: 250px!important;
   width: 250px!important;
   padding: 20px;
-  border-radius: 100%;
+  /* border-radius: 100%; */
   overflow: hidden;
   position: relative;
 }
@@ -90,4 +91,25 @@ a {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+#registration {
+  font: 45px "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+  padding-top: 50px;
+}
+
+.list1 {
+  font: 18px "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+  color: white;
+  position: absolute;
+  left: 275px;
+  top: 125px;
+}
+
+.list2 {
+  font: 18px "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+  color: white;
+  position: absolute;
+  left: 765px;
+  top: 125px;
 }
