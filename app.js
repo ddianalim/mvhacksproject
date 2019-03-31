@@ -13,6 +13,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var quizRouter = require('./routes/quiz');
 var candidatesRouter = require('./routes/candidates');
+var registrationRouter = require('./routes/registration');
 
 var app = express();
 require('dotenv').config();
@@ -32,6 +33,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/quiz', quizRouter);
 app.use('/candidates', candidatesRouter);
+app.use('/registration', registrationRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
